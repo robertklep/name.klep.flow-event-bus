@@ -1,0 +1,154 @@
+{
+  "id": "name.klep.flow-event-bus",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Flow Event Bus"
+  },
+  "description": {
+    "en": "Event bus for flows"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "Robert Klep",
+    "email": "robert@klep.name"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "receive_event",
+        "title": {
+          "en": "Event received",
+          "nl": "Event ontvangen"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Name",
+              "nl": "Naam"
+            }
+          }
+        ],
+        "tokens" : [
+          {
+            "name" : "name",
+            "type" : "string",
+            "title" : {
+              "en" : "Name",
+              "nl" : "Naam"
+            },
+            "example" : "button-pressed"
+          },
+          {
+            "name" : "value",
+            "type" : "string",
+            "title" : {
+              "en" : "Value",
+              "nl" : "Waarde"
+            },
+            "example" : "true"
+          }
+        ]
+      },
+      {
+        "id": "receive_event_with_value",
+        "title": {
+          "en": "Event received with value",
+          "nl": "Event ontvangen met waarde"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Name",
+              "nl": "Naam"
+            }
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "placeholder": {
+              "en": "Value",
+              "nl": "Waarde"
+            }
+          }
+        ],
+        "tokens" : [
+          {
+            "name" : "name",
+            "type" : "string",
+            "title" : {
+              "en" : "Name",
+              "nl" : "Naam"
+            },
+            "example" : "button-pressed"
+          },
+          {
+            "name" : "value",
+            "type" : "string",
+            "title" : {
+              "en" : "Value",
+              "nl" : "Waarde"
+            },
+            "example" : "true"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "emit_event",
+        "title": {
+          "en": "Emit an event",
+          "nl": "Stuur een event"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          }
+        ]
+      },
+      {
+        "id": "emit_event_with_value",
+        "title": {
+          "en": "Emit an event and a value",
+          "nl": "Stuur een event met een waarde"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "placeholder": {
+              "en": "Value",
+              "nl": "Waarde"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
