@@ -104,6 +104,33 @@
             "example" : "true"
           }
         ]
+      },
+      {
+        "id": "receive_any_event",
+        "title": {
+          "en": "Any event received",
+          "nl": "Een willekeurig event ontvangen"
+        },
+        "tokens" : [
+          {
+            "name" : "name",
+            "type" : "string",
+            "title" : {
+              "en" : "Name",
+              "nl" : "Naam"
+            },
+            "example" : "button-pressed"
+          },
+          {
+            "name" : "value",
+            "type" : "string",
+            "title" : {
+              "en" : "Value",
+              "nl" : "Waarde"
+            },
+            "example" : "true"
+          }
+        ]
       }
     ],
     "actions": [

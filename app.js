@@ -9,6 +9,7 @@ module.exports = class FlowEventBus extends Homey.App {
     this.triggers = [
       this.registerTrigger('receive_event'),
       this.registerTrigger('receive_event_with_value'),
+      this.registerTrigger('receive_any_event'),
     ];
 
     // Register actions.
