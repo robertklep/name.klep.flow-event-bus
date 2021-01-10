@@ -21,6 +21,13 @@
     "name": "Robert Klep",
     "email": "robert@klep.name"
   },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "robertklep"
+      }
+    }
+  },
   "flow": {
     "triggers": [
       {
