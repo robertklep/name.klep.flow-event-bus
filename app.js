@@ -3,7 +3,7 @@ const Homey = require('homey');
 module.exports = class FlowEventBus extends Homey.App {
 
   onInit() {
-    this.log('FlowEventBus is running...');
+    this.homey.log('FlowEventBus is running...');
 
     // Register triggers.
     this.triggers = [
@@ -18,9 +18,7 @@ module.exports = class FlowEventBus extends Homey.App {
   }
 
   registerTrigger(name) {
-    return new Homey.FlowCardTrigger(name)
-                    .register()
-                    .registerRunListener(this.handleTrigger.bind(this, name));
+    return this.homey.flow.getTriggerCard(name).registerRunListener(this.handleTrigger.bind(this, name));
   }
 
   async handleTrigger(name, args, state) {
@@ -33,20 +31,18 @@ module.exports = class FlowEventBus extends Homey.App {
     }
 
     if (isMatch) {
-      this.log(`[${ name }] got trigger for event with args`, args, ' and state', state);
+      this.homey.log(`[${ name }] got trigger for event with args`, args, ' and state', state);
     }
 
     return isMatch;
   }
 
   registerAction(name) {
-    return new Homey.FlowCardAction(name)
-                    .register()
-                    .registerRunListener(this.handleAction.bind(this, name));
+    return this.homey.flow.getActionCard(name).registerRunListener(this.handleAction.bind(this, name));
   }
 
   async handleAction(name, args, state) {
-    this.log(`[${ name }] emitting event with args`, args);
+    this.homey.log(`[${ name }] emitting event with args`, args);
 
     // Prevent `missing_tokens` error in `receive_event` trigger.
     if (args.value == null) {

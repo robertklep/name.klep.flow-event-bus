@@ -1,8 +1,9 @@
 {
   "id": "name.klep.flow-event-bus",
-  "version": "1.1.0",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#e78242",
   "name": {
     "en": "Flow Event Bus"
   },
@@ -35,6 +36,10 @@
         "title": {
           "en": "Event received",
           "nl": "Event ontvangen"
+        },
+        "titleFormatted": {
+          "en": "Event \"[[name]]\" received",
+          "nl": "Event \"[[name]]\" ontvangen"
         },
         "args": [
           {
@@ -72,6 +77,10 @@
         "title": {
           "en": "Event received with value",
           "nl": "Event ontvangen met waarde"
+        },
+        "titleFormatted": {
+          "en": "Event \"[[name]]\" received with value \"[[value]]\"",
+          "nl": "Event \"[[name]]\" ontvangen met waarde \"[[value]]\""
         },
         "args": [
           {
@@ -147,6 +156,10 @@
           "en": "Emit an event",
           "nl": "Stuur een event"
         },
+        "titleFormatted": {
+          "en": "Emit an event \"[[name]]\"",
+          "nl": "Stuur een event \"[[name]]\""
+        },
         "args": [
           {
             "name": "name",
@@ -163,6 +176,10 @@
         "title": {
           "en": "Emit an event and a value",
           "nl": "Stuur een event met een waarde"
+        },
+        "titleFormatted": {
+          "en": "Emit an event \"[[name]]\" with value \"[[value]]\"",
+          "nl": "Stuur een event \"[[name]]\" met waarde \"[[value]]\""
         },
         "args": [
           {
