@@ -4,5 +4,8 @@
   },
   "2.0.0": {
     "en": "SDK3 support"
+  },
+  "2.1.0": {
+    "en": "Added card for emitting two values"
   }
 }
