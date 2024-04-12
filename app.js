@@ -15,6 +15,7 @@ module.exports = class FlowEventBus extends Homey.App {
     // Register actions.
     this.registerAction('emit_event');
     this.registerAction('emit_event_with_value');
+    this.registerAction('emit_event_with_values');
   }
 
   registerTrigger(name) {
@@ -47,6 +48,10 @@ module.exports = class FlowEventBus extends Homey.App {
     // Prevent `missing_tokens` error in `receive_event` trigger.
     if (args.value == null) {
       args.value = '';
+    }
+
+    if (args.value2 == null) {
+      args.value2 = '';
     }
 
     // Trigger triggers.

@@ -38,8 +38,8 @@
           "nl": "Event ontvangen"
         },
         "titleFormatted": {
-          "en": "Event \"[[name]]\" received",
-          "nl": "Event \"[[name]]\" ontvangen"
+          "en": "Event [[name]] received",
+          "nl": "Event [[name]] ontvangen"
         },
         "args": [
           {
@@ -69,6 +69,15 @@
               "nl" : "Waarde"
             },
             "example" : "true"
+          },
+          {
+            "name" : "value2",
+            "type" : "string",
+            "title" : {
+              "en" : "Value 2",
+              "nl" : "Waarde 2"
+            },
+            "example" : "true"
           }
         ]
       },
@@ -79,8 +88,8 @@
           "nl": "Event ontvangen met waarde"
         },
         "titleFormatted": {
-          "en": "Event \"[[name]]\" received with value \"[[value]]\"",
-          "nl": "Event \"[[name]]\" ontvangen met waarde \"[[value]]\""
+          "en": "Event [[name]] received with value [[value]]",
+          "nl": "Event [[name]] ontvangen met waarde [[value]]"
         },
         "args": [
           {
@@ -157,8 +166,8 @@
           "nl": "Stuur een event"
         },
         "titleFormatted": {
-          "en": "Emit an event \"[[name]]\"",
-          "nl": "Stuur een event \"[[name]]\""
+          "en": "Emit an event [[name]]",
+          "nl": "Stuur een event [[name]]"
         },
         "args": [
           {
@@ -178,8 +187,8 @@
           "nl": "Stuur een event met een waarde"
         },
         "titleFormatted": {
-          "en": "Emit an event \"[[name]]\" with value \"[[value]]\"",
-          "nl": "Stuur een event \"[[name]]\" met waarde \"[[value]]\""
+          "en": "Emit an event [[name]] with value [[value]]",
+          "nl": "Stuur een event [[name]] met waarde [[value]]"
         },
         "args": [
           {
@@ -196,6 +205,43 @@
             "placeholder": {
               "en": "Value",
               "nl": "Waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "emit_event_with_values",
+        "title": {
+          "en": "Emit an event and two values",
+          "nl": "Stuur een event met twee waarden"
+        },
+        "titleFormatted": {
+          "en": "Emit an event [[name]] with values [[value]] and [[value2]]",
+          "nl": "Stuur een event [[name]] met waarden [[value]] en [[value2]]"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "placeholder": {
+              "en": "Value",
+              "nl": "Waarde"
+            }
+          },
+          {
+            "name": "value2",
+            "type": "text",
+            "placeholder": {
+              "en": "Value 2",
+              "nl": "Waarde 2"
             }
           }
         ]
