@@ -127,6 +127,81 @@
               "nl" : "Waarde"
             },
             "example" : "true"
+          },
+          {
+            "name" : "value2",
+            "type" : "string",
+            "title" : {
+              "en" : "Value 2",
+              "nl" : "Waarde 2"
+            },
+            "example" : "true"
+          }
+        ]
+      },
+      {
+        "id": "receive_event_with_values",
+        "title": {
+          "en": "Event received with values",
+          "nl": "Event ontvangen met waarden"
+        },
+        "titleFormatted": {
+          "en": "Event [[name]] received with values [[value]] and [[value2]]",
+          "nl": "Event [[name]] ontvangen met waarden [[value]] en [[value2]]"
+        },
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Name",
+              "nl": "Naam"
+            }
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "placeholder": {
+              "en": "Value",
+              "nl": "Waarde"
+            }
+          },
+          {
+            "name": "value2",
+            "type": "text",
+            "placeholder": {
+              "en": "Value 2",
+              "nl": "Waarde 2"
+            }
+          }
+        ],
+        "tokens" : [
+          {
+            "name" : "name",
+            "type" : "string",
+            "title" : {
+              "en" : "Name",
+              "nl" : "Naam"
+            },
+            "example" : "button-pressed"
+          },
+          {
+            "name" : "value",
+            "type" : "string",
+            "title" : {
+              "en" : "Value",
+              "nl" : "Waarde"
+            },
+            "example" : "true"
+          },
+          {
+            "name" : "value2",
+            "type" : "string",
+            "title" : {
+              "en" : "Value 2",
+              "nl" : "Waarde 2"
+            },
+            "example" : "true"
           }
         ]
       },
@@ -152,6 +227,15 @@
             "title" : {
               "en" : "Value",
               "nl" : "Waarde"
+            },
+            "example" : "true"
+          },
+          {
+            "name" : "value2",
+            "type" : "string",
+            "title" : {
+              "en" : "Value 2",
+              "nl" : "Waarde 2"
             },
             "example" : "true"
           }

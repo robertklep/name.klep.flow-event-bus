@@ -9,6 +9,7 @@ module.exports = class FlowEventBus extends Homey.App {
     this.triggers = [
       this.registerTrigger('receive_event'),
       this.registerTrigger('receive_event_with_value'),
+      this.registerTrigger('receive_event_with_values'),
       this.registerTrigger('receive_any_event'),
     ];
 
@@ -31,11 +32,15 @@ module.exports = class FlowEventBus extends Homey.App {
       isMatch = args.value === state.value;
     }
 
-    if (isMatch) {
+    if (isMatch && 'value2' in args) {
+      isMatch &= args.value2 === state.value2;
+    }
+
+    if (!!isMatch) {
       this.homey.log(`[${ name }] got trigger for event with args`, args, ' and state', state);
     }
 
-    return isMatch;
+    return !!isMatch;
   }
 
   registerAction(name) {
